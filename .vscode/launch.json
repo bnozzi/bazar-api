@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BazarApplication<bazar>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.bazar.bazar.BazarApplication",
+            "projectName": "bazar",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BazarApplication<bazar>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.bazar.BazarApplication",
+            "projectName": "bazar",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
