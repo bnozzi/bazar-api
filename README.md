@@ -28,7 +28,7 @@ Por otra parte, el bazar también necesita conocer su producto más caro y su pr
 
 ## DER
 <!-- cargar imagen  -->
-![Producto](../../ERDDiagram.jpg)
+![Producto](ERDDiagram.jpg)
 
 ## Ejecutar el proyecto
 
