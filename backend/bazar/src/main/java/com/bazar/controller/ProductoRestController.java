@@ -3,30 +3,29 @@ package com.bazar.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bazar.model.Producto;
 import com.bazar.service.ProductoService;
 
-@RestController
+
+@RestController 
 public class ProductoRestController {
 
     @Autowired
     private ProductoService productoService;
-    
-    @GetMapping("/productos/traer")
-    @ResponseBody
-    public List<Producto> getProductos() {
-        return productoService.listarProductos();
-    }
 
-    //get by id
+    
+
+    // get by id
     @GetMapping("/productos/traer/{id}")
     @ResponseBody
     public Producto getProductoById(@PathVariable long id) {
@@ -39,8 +38,42 @@ public class ProductoRestController {
     }
 
     @PutMapping("/productos/edit")
-    public void editarProducto(@RequestBody Producto producto){
+    public void editarProducto(@RequestBody Producto producto) {
         productoService.actualizarProducto(producto);
-        
+
     }
+
+    @GetMapping("/productos/traer/menorPrecio")
+    @ResponseBody
+    public Producto productoDeMenorPrecio() {
+        return productoService.productoMenorPrecio();
+    }
+
+    @GetMapping("/productos/traer/mayorPrecio")
+    @ResponseBody
+    public Producto productoDeMayorPrecio() {
+        return productoService.productoMayorPrecio();
+    }
+
+    @GetMapping("/productos/traer")
+    @ResponseBody
+    public List<Producto> getProductos(@RequestParam(value = "precio", required = false) String orden) {
+        if (orden != null) {
+            if (orden.equalsIgnoreCase("asc")) {
+                return productoService.productosDeMenorAMayor();
+            }
+            if (orden.equalsIgnoreCase("desc")) {
+                return productoService.productosDeMayorAMenor();
+            }
+        }
+        return productoService.listarProductos();
+    }
+    
+
+    @DeleteMapping("/productos/eliminar/{id}")
+    public void eliminarProducto(@PathVariable long id) {
+        productoService.eliminarProducto(id);
+    }
+
+
 }

@@ -25,6 +25,8 @@
                         <h5 class="card-title text-primary" th:text="${product.nombre}">Nombre</h5>
                         <p class="card-text" th:text="${product.precio}"></p>
                         <a  th:href="@{/productos/editar/{id}(id=${product.id})}" class="btn btn-primary">editar</a>
+                        <a  th:href="@{/productos/editar/{id}(id=${product.id})}" class="btn btn-danger">eliminar</a>
+
                     </div>
                 </div>
             </div>

@@ -60,6 +60,7 @@
           .then(response => {
             if (response.ok) {
               console.log('Producto editado correctamente');
+              window.location.href = "/productos"; // Redirecciona a la URL deseada
             } else {
               console.error('Error al editar el producto');
             }

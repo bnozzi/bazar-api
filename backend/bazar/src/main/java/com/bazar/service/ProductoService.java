@@ -1,6 +1,7 @@
 package com.bazar.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,29 @@ public class ProductoService implements ProductoInterface{
     @Override
     public void eliminarProducto(long idProducto) {
         productRepo.deleteById(idProducto);
+    }
+
+    @Override
+    public Producto productoMenorPrecio() {
+        return productRepo.findFirstByOrderByPrecioAsc();
+    }
+
+    @Override
+    public Producto productoMayorPrecio() {
+        return productRepo.findFirstByOrderByPrecioDesc();
+
+    }
+
+    @Override
+    public List<Producto> productosDeMayorAMenor() {
+        return productRepo.findAllByOrderByPrecioAsc();
+        
+    }
+
+    @Override
+    public List<Producto> productosDeMenorAMayor() {
+        return productRepo.findAllByOrderByPrecioDesc();
+    
     }
     
 }

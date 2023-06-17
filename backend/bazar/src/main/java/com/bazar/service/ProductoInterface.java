@@ -12,6 +12,15 @@ public interface ProductoInterface {
     public void actualizarProducto(Producto producto);
     public void eliminarProducto(long idProducto);
 
+    public Producto productoMenorPrecio();
+    public Producto productoMayorPrecio();
+
+    public List<Producto> productosDeMayorAMenor();
+    public List<Producto> productosDeMenorAMayor();
+
+
+
+
         
     
 }
