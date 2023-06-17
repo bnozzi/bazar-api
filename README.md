@@ -1,6 +1,7 @@
 # Bazar
 
 ## Objetivo
+
 La creación de una API que, dependiendo del tipo de solicitud que reciba, permita hacer el alta, baja, modificación o lectura de los productos en una base de datos.
 Por otra parte, el bazar también necesita conocer su producto más caro y su producto más barato. Para ello necesita desarrollar endpoints que le permitan:
 
@@ -47,4 +48,3 @@ spring.thymeleaf.suffix=.html
 ```
 
 para acceder a la documentacion de las apis con swagger ingrese a [http://localhost:8085/swagger-ui/index.html](http://localhost:8085/swagger-ui/index.html)
-
