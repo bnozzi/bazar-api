@@ -52,13 +52,13 @@ public class ProductoService implements ProductoInterface{
 
     @Override
     public List<Producto> productosDeMayorAMenor() {
-        return productRepo.findAllByOrderByPrecioAsc();
+        return productRepo.findAllByOrderByPrecioDesc();
         
     }
 
     @Override
     public List<Producto> productosDeMenorAMayor() {
-        return productRepo.findAllByOrderByPrecioDesc();
+        return productRepo.findAllByOrderByPrecioAsc();
     
     }
     

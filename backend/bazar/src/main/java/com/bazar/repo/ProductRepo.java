@@ -13,10 +13,10 @@ public interface ProductRepo extends JpaRepository< Producto,Long>{
     Producto findFirstByOrderByPrecioAsc();
     Producto findFirstByOrderByPrecioDesc();
     
-    @Query("SELECT p FROM Producto p ORDER BY p.precio DESC")
+    //@Query("SELECT p FROM Producto p ORDER BY p.precio DESC")
     List<Producto> findAllByOrderByPrecioDesc();
 
-    @Query("SELECT p FROM Producto p ORDER BY p.precio ASC")
+    //@Query("SELECT p FROM Producto p ORDER BY p.precio ASC")
     List<Producto> findAllByOrderByPrecioAsc();
 
     
