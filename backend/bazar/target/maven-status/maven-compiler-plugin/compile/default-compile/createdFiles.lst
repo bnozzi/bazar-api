@@ -1,0 +1,7 @@
+com/bazar/service/ProductoInterface.class
+com/bazar/BazarApplication.class
+com/bazar/controller/ProductoController.class
+com/bazar/service/ProductoService.class
+com/bazar/controller/ProductoRestController.class
+com/bazar/repo/ProductRepo.class
+com/bazar/model/Producto.class

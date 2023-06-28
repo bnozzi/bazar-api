@@ -1,0 +1,7 @@
+/home/bruno/Proyectos/java/backend/bazar/backend/bazar/src/main/java/com/bazar/BazarApplication.java
+/home/bruno/Proyectos/java/backend/bazar/backend/bazar/src/main/java/com/bazar/service/ProductoService.java
+/home/bruno/Proyectos/java/backend/bazar/backend/bazar/src/main/java/com/bazar/service/ProductoInterface.java
+/home/bruno/Proyectos/java/backend/bazar/backend/bazar/src/main/java/com/bazar/repo/ProductRepo.java
+/home/bruno/Proyectos/java/backend/bazar/backend/bazar/src/main/java/com/bazar/controller/ProductoRestController.java
+/home/bruno/Proyectos/java/backend/bazar/backend/bazar/src/main/java/com/bazar/model/Producto.java
+/home/bruno/Proyectos/java/backend/bazar/backend/bazar/src/main/java/com/bazar/controller/ProductoController.java
