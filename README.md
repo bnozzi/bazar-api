@@ -10,9 +10,8 @@ Por otra parte, el bazar también necesita conocer su producto más caro y su pr
 - Obtener todos los productos ordenados de más barato a más caro.
 - Obtener todos los productos de más caro a más barato.
 
-## Tecnologias usadas
-
-- Spring
+## Link a swagger
+[link](https://bazar-92eq.onrender.com/swagger-ui/index.html)
 
 ## dependencias
 
