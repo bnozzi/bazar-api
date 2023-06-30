@@ -13,6 +13,30 @@ Por otra parte, el bazar también necesita conocer su producto más caro y su pr
 ## Link a swagger
 [link](https://bazar-92eq.onrender.com/swagger-ui/index.html)
 
+## Endpoints
+PUT
+/productos/edit
+
+POST
+/productos/crear
+
+GET
+/productos/traer
+/productos/traer?precio=asc
+/productos/traer?precio=desc
+
+GET
+/productos/traer/{id}
+
+GET
+/productos/traer/menorPrecio
+
+GET
+/productos/traer/mayorPrecio
+
+DELETE
+/productos/eliminar/{id}
+
 ## dependencias
 
 - springdoc-openapi-starter-webmvc-ui:2.1.0
